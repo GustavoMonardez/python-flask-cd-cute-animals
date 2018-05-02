@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cool Animals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css')}}" />
+</head>
+<body>
+    <div class="wrapper">
+    {% for i in range(0,num) %}
+        {% if images[i] != "Thumbs.db" %}
+        <img src="{{url_for('static', filename='images/'+ images[i])}}" alt="">    
+        {% else %}
+        <img src="{{url_for('static', filename='images/'+ images[i+1])}}" alt="">   
+        {% endif %}
+    {% endfor %}
+    </div>
+</body>
+</html>

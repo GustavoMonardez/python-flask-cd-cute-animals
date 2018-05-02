@@ -1,0 +1,15 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.wrapper{
+    width:970px;
+    margin:auto;
+}
+img{
+    width: 200px;
+    height:130px;
+    padding:5px;
+    border:1px solid silver;
+}
